@@ -87,40 +87,81 @@ $yellow: #fae822;
 $pink: #f8d8ff;
 
 //default font-sizes
-$xs-size: 16px; //alert text
-$sm-size: 24px; //section text
-$md-size: 64px; //section title
-$lg-size: 104px; //header title
+$xs-size: 11px; //alert link
+$sm-size: 12px; //alert text
+$tx-size: 14px; //section text;
+$bt-size: 16px; //button;
+$md-size: 18px; //header text
+$lg-size: 64px; //section title
+$xl-size: 88px; //menu option
+$xx-size: 104px; //header title
 
-p{
+p, a{
   font-family: $lato-regular;
+  font-size: $tx-size;
   color: $gray-1;
+  line-height: 1.4;
+  text-align: left;
 }
 
 //message
-
+.message{
+  p{
+    font-size: $sm-size;
+  }
+  a{
+    color: $blue-2;
+    font-size: $xs-size;
+    font-weight: bold;
+    padding: 5px 0;
+    letter-spacing: 0.25px;
+    border-bottom: 1px solid $blue-2;
+  }
+}
 
 //header
 header{
   .h-title{
     font-family: $lato-black;
-    font-size: $lg-size;
+    font-size: $xx-size;
     color: $blue-1;
+    line-height: 1;
+  }
+  p{
+    font-size: $md-size;
+    line-height: 1.25;
   }
 }
 
 //content
 .c-title{
   font-family: $lato-black;
-  font-size: $md-size;
+  font-size: $lg-size;
   color: $blue-1;
+  line-height: 1;
 }
 
-.btn{
+.button{
   background-color: $blue-2;
   color: $white;
-  padding: 15px;
-  font-size: $xs-size;
+  font-size: $tx-size;
   font-family: $lato-regular;
-  border-radius: 5px;
+  padding: 13px 30px;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  outline: 0;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.5;
+  -webkit-box-shadow: 0px 5px 40px -15px $blue-2;
+  -moz-box-shadow: 0px 5px 40px -15px $blue-2;
+  box-shadow: 0px 5px 40px -15px $blue-2;
+}
+
+section{
 }
