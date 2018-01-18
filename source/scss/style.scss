@@ -1,3 +1,126 @@
-body{
-  background-color: black;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+	font-family: 'Lato Regular';
+	src: url('../fonts/Lato-Regular.ttf');
+	src: url('../fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato Bold';
+	src: url('../fonts/Lato-Bold.ttf');
+	src: url('../fonts/Lato-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato Black';
+	src: url('../fonts/Lato-Black.ttf');
+	src: url('../fonts/Lato-Black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$lato-regular: 'Lato Regular';
+$lato-black: 'Lato Black';
+$lato-bold: 'Lato Bold';
+
+//default colors
+$white: #FFFFFF;
+$blue-1: #435877;
+$blue-2: #009fe2;
+$blue-3: #7fcff0;
+$blue-4: #a1caff;
+$cyan: #75f7db;
+$gray-1: #7e8f9a;
+$gray-2: #ededf7;
+$magenta: #f13164;
+$salmon: #fdb092;
+$yellow: #fae822;
+$pink: #f8d8ff;
+
+//default font-sizes
+$xs-size: 16px; //alert text
+$sm-size: 24px; //section text
+$md-size: 64px; //section title
+$lg-size: 104px; //header title
+
+p{
+  font-family: $lato-regular;
+  color: $gray-1;
+}
+
+//message
+
+
+//header
+header{
+  .h-title{
+    font-family: $lato-black;
+    font-size: $lg-size;
+    color: $blue-1;
+  }
+}
+
+//content
+.c-title{
+  font-family: $lato-black;
+  font-size: $md-size;
+  color: $blue-1;
+}
+
+.btn{
+  background-color: $blue-2;
+  color: $white;
+  padding: 15px;
+  font-size: $xs-size;
+  font-family: $lato-regular;
+  border-radius: 5px;
 }
