@@ -16,6 +16,7 @@ time, mark, audio, video {
 	border: 0;
   text-decoration: none;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -81,20 +82,21 @@ $blue-4: #a1caff;
 $cyan: #75f7db;
 $gray-1: #7e8f9a;
 $gray-2: #ededf7;
-$magenta: #f13164;
+$pink-1: #f13164;
+$pink-2: #f8d8ff;
 $salmon: #fdb092;
 $yellow: #fae822;
-$pink: #f8d8ff;
 
 //default font-sizes
-$xs-size: 16px; //alert link
-$sm-size: 18px; //alert text
-$tx-size: 20px; //section text;
-$bt-size: 16px; //button;
-$md-size: 18px; //header text
-$lg-size: 64px; //section title
-$xl-size: 88px; //menu option
-$xx-size: 104px; //header title
+$xs-size: 16pt; //alert link
+$sm-size: 18pt; //alert text
+$tx-size: 20pt; //section text
+$bt-size: 22pt; //button
+$md-size: 24pt; //header text
+$lg-size: 80pt; //section title
+$xl-size: 100pt; //menu option
+$xx-size: 158pt; //header title
+$wm-size: 290pt; //water mark
 
 p, a{
   font-family: $lato-regular;
@@ -104,50 +106,13 @@ p, a{
   text-align: left;
 }
 
-//message
-.message{
-  p{
-    font-size: $sm-size;
-  }
-  a{
-    color: $blue-2;
-    font-size: $xs-size;
-    font-weight: bold;
-    padding: 5px 0;
-    letter-spacing: 0.25px;
-    border-bottom: 1px solid $blue-2;
-  }
-}
-
-//header
-header{
-  .h-title{
-    font-family: $lato-black;
-    font-size: $xx-size;
-    color: $blue-1;
-    line-height: 1;
-  }
-  p{
-    font-size: $md-size;
-    line-height: 1.25;
-  }
-}
-
-//content
-.c-title{
-  font-family: $lato-black;
-  font-size: $lg-size;
-  color: $blue-1;
-  line-height: 1;
-}
-
 .button{
   background-color: $blue-2;
   color: $white;
   font-size: $tx-size;
   font-family: $lato-regular;
-  padding: 13px 30px;
-  border-radius: 4px;
+	padding: 25px 50px;
+	border-radius: 5px;
   border: none;
   display: inline-block;
   outline: 0;
@@ -164,4 +129,107 @@ header{
 }
 
 section{
+	width: 1220px;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 20px;
+	border: 2px solid red;
+}
+
+//message
+#alert{
+  p{
+    font-size: $sm-size;
+  }
+  a{
+    color: $blue-2;
+    font-size: $xs-size;
+    font-weight: bold;
+    padding: 5px 0;
+    letter-spacing: 0.25px;
+    border-bottom: 1px solid $blue-2;
+  }
+}
+
+//header
+#header{
+	.navbar{
+		position: relative;
+		width: 175px;
+		height: 70px;
+		margin: 0;
+		cursor: pointer;
+		img{
+			height: 70px;
+			width: auto;
+			position: absolute;
+		}
+		span{
+			height: 3px;
+	    width: 30px;
+	    background-color: $blue-2;
+	    position: absolute;
+	    top: calc(50% - 1.5px);
+	    left: 100px;
+			&:before{
+				content: "";
+		    position: absolute;
+		    height: 3px;
+		    width: 45px;
+		    background-color: $blue-2;
+		    top: -15px;
+			}
+			&:after{
+				content: "";
+		    position: absolute;
+		    height: 3px;
+		    width: 45px;
+		    background-color: $blue-2;
+		    bottom: 0;
+		    top: 15px;
+			}
+		}
+	}
+  .h-title{
+    font-family: $lato-black;
+    font-size: $xx-size;
+    color: $blue-1;
+    line-height: 1;
+  }
+  p{
+    font-size: $md-size;
+    line-height: 1.25;
+  }
+}
+
+//tecnologia
+#tecnologia{
+	.c-title{
+	  font-family: $lato-black;
+	  font-size: $lg-size;
+	  color: $blue-1;
+	  line-height: 1;
+	}
+}
+
+//capacidades
+#capacidades{
+
+}
+
+//lab
+#labs{
+	.watermark{
+		font-family: $lato-black;
+		font-size: $wm-size;
+		color: $blue-1;
+		opacity: 0.1;
+	}
+}
+
+//contato
+#contato{
+	.button{
+		background-color: $pink-1;
+	}
 }
