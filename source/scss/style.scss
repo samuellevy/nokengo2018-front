@@ -131,12 +131,21 @@ p, a{
 
 section{
 	position: relative;
-	width: 1220px;
-	height: 100vh;
-	margin: 0 auto;
-	padding: 22px;
+	margin: 0;
+	padding: 0;
 	clear: both;
 	//border: 2px solid red;
+}
+
+.wrapper{
+	width: 1220px;
+	padding: 0 22px;
+	margin: 0 auto;
+}
+
+.table{
+	display: table;
+	height: 100%;
 }
 
 //message
@@ -161,6 +170,7 @@ section{
 		position: absolute;
 		width: 170px;
 		height: 70px;
+		margin: 22px;
 		cursor: pointer;
 		z-index: 10;
 		img{
@@ -194,15 +204,23 @@ section{
 			}
 		}
 	}
-	.intro{
-		width: 50%;
-		height: 100%;
-		display: table;
+}
+
+//intro
+#intro{
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap;
+	float: right;
+	.table{
 		.content{
+			width: 610px;
+			padding-left: 22px;
+			box-sizing: border-box;
 			position: relative;
 			clear: both;
-	    display: table-cell;
-	    vertical-align: middle;
+			display: table-cell;
+			vertical-align: middle;
 			p{
 				font-size: $md-size;
 				line-height: 1.25;
@@ -233,18 +251,15 @@ section{
 			}
 		}
 	}
+
 	.image{
-		width: 50vw;
 		height: 100%;
-		margin: -22px;
-		margin-left: 22px;
-		background: #f2f5f8;
-    background: linear-gradient(-41deg, #f2f5f8, #ebecee);
-		margin-left: 80px; //melhorar
-		display: table; //melhorar
+		width: 50vw;
+		background: #f2f5f8; //for not supported browsers
+		background: linear-gradient(-41deg, #f2f5f8, #ebecee);
 		img{
-			margin-top: 300px; //melhorar
-	    margin-left: -100px; //melhorar
+			// margin-top: 300px; //melhorar
+			// margin-left: -100px; //melhorar
 		}
 	}
 }
