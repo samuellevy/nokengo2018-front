@@ -134,19 +134,15 @@ section{
 	margin: 0;
 	padding: 0;
 	clear: both;
-	//border: 2px solid red;
 }
 
 .wrapper{
+	height: 100%;
 	width: 1220px;
-	padding: 0 22px;
 	margin: 0 auto;
+	position: relative;
 }
 
-.table{
-	display: table;
-	height: 100%;
-}
 
 //message
 #alert{
@@ -209,18 +205,22 @@ section{
 //intro
 #intro{
 	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
 	display: flex;
 	flex-wrap: nowrap;
-	float: right;
-	.table{
+	background: transparent linear-gradient(-41deg, #f2f5f8, #ebecee) top right/50% 100% no-repeat fixed;
+	.wrapper{
+		display: table;
+		padding: 0 22px;
+		box-sizing: border-box;
 		.content{
-			width: 610px;
-			padding-left: 22px;
-			box-sizing: border-box;
+			height: 100%;
+			width: 50%;
 			position: relative;
-			clear: both;
 			display: table-cell;
 			vertical-align: middle;
+			z-index: 2;
 			p{
 				font-size: $md-size;
 				line-height: 1.25;
@@ -250,18 +250,16 @@ section{
 				margin-top: 20px;
 			}
 		}
-	}
-
-	.image{
-		height: 100%;
-		width: 50vw;
-		background: #f2f5f8; //for not supported browsers
-		background: linear-gradient(-41deg, #f2f5f8, #ebecee);
-		img{
-			// margin-top: 300px; //melhorar
-			// margin-left: -100px; //melhorar
+		.image{
+			z-index: 1;
+			img{
+				transform: translate(-100px, 300px);
+				position: absolute;
+			}
 		}
 	}
+
+
 }
 
 //tecnologia
