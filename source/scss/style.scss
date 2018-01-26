@@ -143,7 +143,12 @@ section{
 	position: relative;
 }
 
-
+.tag{
+	font-family: $lato-bold;
+	font-size: $xs-size;
+	color: $gray-1;
+	text-transform: uppercase;
+}
 //message
 #alert{
   p{
@@ -206,10 +211,11 @@ section{
 #intro{
 	height: 100vh;
 	width: 100vw;
-	overflow-x: hidden;
+	overflow-y: hidden;
 	display: flex;
 	flex-wrap: nowrap;
 	background: transparent linear-gradient(-41deg, #f2f5f8, #ebecee) top right/50% 100% no-repeat fixed;
+	border-bottom: 2px solid $gray-2;
 	.wrapper{
 		display: table;
 		padding: 0 22px;
@@ -220,12 +226,12 @@ section{
 			position: relative;
 			display: table-cell;
 			vertical-align: middle;
-			z-index: 2;
+			z-index: 1;
 			p{
 				font-size: $md-size;
 				line-height: 1.25;
 				width: 80%;
-				margin-top: 40px;
+				margin-top: 10%;
 			}
 			.h-title{
 				font-family: $lato-black;
@@ -233,8 +239,26 @@ section{
 				color: $blue-1;
 				line-height: 0.8;
 				width: 200%;
-				margin-top: 0;
-				margin-bottom: 20px;
+				margin: 0;
+			}
+			// span{
+			// 	height: 3px;
+			// 	width: 365px;
+			// 	background-color: $pink-1;
+			// 	z-index: -1;
+			// 	position: absolute;
+			// 	top: auto;
+			// 	right: 0;
+			// }
+			.button{
+				background-color: $blue-2;
+				margin-top: 20px;
+			}
+		}
+		.image{
+			max-width: 0;
+			img{
+				transform: translate(-100px, 30vh);
 			}
 			span{
 				height: 3px;
@@ -242,19 +266,9 @@ section{
 				background-color: $pink-1;
 				z-index: -1;
 				position: absolute;
-				top: auto;
-				right: 0;
-			}
-			.button{
-				background-color: $blue-2;
-				margin-top: 20px;
-			}
-		}
-		.image{
-			z-index: 1;
-			img{
-				transform: translate(-100px, 300px);
-				position: absolute;
+				top: 50%;
+				right: 50%;
+				margin-top: 2.5%;
 			}
 		}
 	}
@@ -264,12 +278,20 @@ section{
 
 //tecnologia
 #tecnologia{
-	.c-title{
-	  font-family: $lato-black;
-	  font-size: $lg-size;
-	  color: $blue-1;
-	  line-height: 1;
+	.wrapper{
+		border-left: 2px solid $gray-2;
+		border-right: 2px solid $gray-2;
+		.intro{
+
+		}
+		.c-title{
+		  font-family: $lato-black;
+		  font-size: $lg-size;
+		  color: $blue-1;
+		  line-height: 1;
+		}
 	}
+
 }
 
 //capacidades
