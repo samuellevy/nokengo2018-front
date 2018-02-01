@@ -150,11 +150,13 @@ section{
 	font-family: $lato-bold;
 	font-size: $tx-size;
 	color: $blue-1;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 	height: 60px;
   position: absolute;
   border-bottom: 2px solid $blue-1;
-  transform: rotate(-90deg) translate(-50px, -95px);
+	transform: rotate(-90deg) translate(-100%, -100%);
+  transform-origin: 0% 0%;
 }
 
 //message
@@ -288,9 +290,12 @@ section{
 #tecnologia{
 	.wrapper{
 		border-left: $border-default;
-		.intro{
+		.t-intro{
+	    padding: 10% 0;
 			p{
 				font-size: $md-size;
+				width: 60%;
+				margin: 0 10%;
 			}
 		}
 		.c-title{
