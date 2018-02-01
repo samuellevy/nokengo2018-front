@@ -94,6 +94,7 @@ $sm-size: 18px; //alert text
 $tx-size: 20px; //section text
 $bt-size: 22px; //button
 $md-size: 24px; //header text
+$nm-size: 64px; //tech index
 $lg-size: 80px; //section title
 $xl-size: 100px; //menu option
 $xx-size: 158px; //header title
@@ -157,6 +158,13 @@ section{
   border-bottom: 2px solid $blue-1;
 	transform: rotate(-90deg) translate(-100%, -100%);
   transform-origin: 0% 0%;
+}
+
+.c-title{
+	font-family: $lato-black;
+	font-size: $lg-size;
+	color: $blue-1;
+	line-height: 1;
 }
 
 //message
@@ -298,11 +306,22 @@ section{
 				margin: 0 10%;
 			}
 		}
-		.c-title{
-		  font-family: $lato-black;
-		  font-size: $lg-size;
-		  color: $blue-1;
-		  line-height: 1;
+		.t-content{
+			margin-bottom: 50px; //remover
+			display: flex;
+			padding: 0 22px;
+			.table{
+				position: relative;
+				display: table;
+			}
+			.index{
+				font-size: 64px;
+		    font-family: "Lato Black";
+		    color: #435877;
+		    position: absolute;
+		    bottom: 0;
+		    right: 0;
+			}
 		}
 	}
 
