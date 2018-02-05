@@ -475,6 +475,7 @@ section{
 		opacity: 0.1;
 		position: absolute;
 		left: -30%;
+    top: 15%;
 		white-space: nowrap;
 	}
 	.wrapper{
@@ -484,6 +485,9 @@ section{
 			.text{
 				width: 70%;
 				margin: auto;
+				.t-title{
+			    padding: 12.5% 0 5%;
+				}
 				.t-paragraph{
 					width: 65%;
 					&:before{
@@ -493,10 +497,21 @@ section{
 						display: none;
 					}
 				}
-				a{
-					color: $pink-1;
-					font-size: $sm-size;
-					font-family: $lato-bold;
+				.link{
+					width: fit-content;
+					margin: auto;
+					.line{
+						width: 2px;
+						height: 80px;
+						margin: 5% auto 15%;
+						background-color: $pink-1;
+					}
+					a{
+						color: $pink-1;
+						font-size: $sm-size;
+						font-family: $lato-bold;
+						margin: 10px 0;
+					}
 				}
 			}
 		}
