@@ -185,6 +185,7 @@ section{
 		}
 		&:after{
 			content: "";
+			z-index: -1;
 			height: 1px;
 			width: 100%;
 			position: absolute;
