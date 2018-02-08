@@ -543,6 +543,30 @@ section{
 
 //contato
 #contato{
+  background: transparent linear-gradient(#f8f8f9, #f8f8f9) bottom left/80% 70% no-repeat fixed;
+	.wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		.text{
+			width: 60%;
+			margin-top: 15%;
+			padding: 22px;
+			box-sizing: border-box;
+			.t-paragraph{
+				width: 70%;
+				&:before{
+					top: 0;
+				}
+				&:after{
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+		.image{
+			width: 40%;
+		}
+	}
 	.button{
 		background-color: $pink-1;
 	}
