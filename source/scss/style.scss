@@ -88,6 +88,7 @@ $pink-1: #f13164;
 $pink-2: #f8d8ff;
 $salmon: #fdb092;
 $yellow: #fae822;
+$blue-1-op: rgba(67, 88, 119, 0.95);
 
 //default font-sizes
 $xs-size: 16px; //alert link
@@ -211,7 +212,7 @@ section{
   }
 }
 
-//header
+//menu
 #nav{
 	display: flex;
 	.navbar{
@@ -220,7 +221,7 @@ section{
 		height: 70px;
 		margin: 22px;
 		cursor: pointer;
-		z-index: 10;
+		z-index: 11;
 		img{
 			height: 70px;
 			width: auto;
@@ -250,6 +251,35 @@ section{
 		    bottom: 0;
 		    top: 15px;
 			}
+		}
+	}
+	.menu{
+		position: fixed;
+		z-index: 10;
+		overflow: hidden;
+		width: 0;
+		height: 100vw;
+		background-color: $blue-1-op;
+		transition: all 0.5s linear;
+		ul{
+			list-style: none;
+			padding: 5vw 0;
+			a{
+				cursor: pointer;
+				li{
+					font-family: $lato-black;
+					font-size: $xl-size;
+					color: $white;
+					text-align: center;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	&:hover{
+		.menu{
+
+			width: 100vw;
 		}
 	}
 }
