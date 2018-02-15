@@ -74,6 +74,21 @@ $lato-regular: 'Lato Regular';
 $lato-black: 'Lato Black';
 $lato-bold: 'Lato Bold';
 
+//responsive viewport
+$max-breakpoint: 1920;
+$wide-screen: "(min-width: #{$max-breakpoint}px)";
+
+@function get-vw($target) {
+  $vw-context: ($max-breakpoint * .01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@media #{$wide-screen} {
+	@function get-vw($target) {
+		@return $target;
+	}
+}
+
 //default colors
 $white: #FFFFFF;
 $blue-1: #435877;
@@ -305,14 +320,14 @@ section{
 			vertical-align: middle;
 			z-index: 1;
 			p{
-				font-size: $md-size;
+				font-size: get-vw($md-size);
 				line-height: 1.25;
 				width: 80%;
 				margin-top: 5%;
 			}
 			.h-title{
 				font-family: $lato-black;
-				font-size: $xx-size;
+				font-size: get-vw($xx-size);
 				color: $blue-1;
 				line-height: 0.8;
 				width: 200%;
