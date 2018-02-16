@@ -76,20 +76,22 @@ $lato-bold: 'Lato Bold';
 
 //responsive viewport
 $max-breakpoint: 1920;
-$wide-screen: "(min-width: #{$max-breakpoint}px)";
+$stop: 0;
 
 @function get-vw($target) {
   $vw-context: ($max-breakpoint * .01) * 1px;
-  @return ($target/$vw-context) * 1vw;
+  @if ($stop < 1920px){
+    @return ($target/$vw-context) * 1vw;
+  }
+  @else{
+    @return $target;
+  }
 }
 
-//responsive viewport
-$max-breakpoint: 1920;
-
-@function get-vw($target) {
-  $vw-context: ($max-breakpoint * .01) * 1px;
-  @return ($target/$vw-context) * 1vw;
+@media screen and (min-width: 1920px){
+  $stop: 1920px;
 }
+
 
 //default colors
 $white: #FFFFFF;
@@ -130,7 +132,7 @@ p, a{
   font-family: $lato-regular;
   font-size: $tx-size;
   color: $gray-1;
-  line-height: get-vw(1.5);
+  line-height: 1.5;
   text-align: left;
 	padding: get-vw(15px) 0;
 }
@@ -164,7 +166,7 @@ section{
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-  line-height: get-vw(1.5);
+  line-height: 1.5;
   -webkit-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
   -moz-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
   box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
@@ -188,7 +190,7 @@ section{
 		font-family: $lato-black;
 		font-size: $lg-size;
 		color: $blue-1;
-		line-height: get-vw(0.9);
+		line-height: 0.9;
 		position: relative;
 	}
 	.t-paragraph{
@@ -249,7 +251,7 @@ section{
 	    width: get-vw(30px);
 	    background-color: $blue-2;
 	    position: absolute;
-	    top: calc(50% - get-vw(1.5px));
+	    top: get-vw(30px);
 	    left: get-vw(98px);
 			&:before{
 				content: "";
@@ -311,7 +313,7 @@ section{
 	border-bottom: $border-default;
 	.wrapper{
 		display: table;
-		padding: 0 22px;
+		padding: 0 get-vw(22px);
 		box-sizing: border-box;
 		.content{
 			height: 100%;
@@ -321,41 +323,37 @@ section{
 			vertical-align: middle;
 			z-index: 1;
 			p{
-				font-size: get-vw($md-size);
+				font-size: $md-size;
 				line-height: 1.25;
 				width: 80%;
-				margin-top: 5%;
+				margin-top: get-vw(20px);
 			}
 			.h-title{
 				font-family: $lato-black;
-				font-size: get-vw($xx-size);
+				font-size: $xx-size;
 				color: $blue-1;
 				line-height: 0.8;
 				width: 200%;
 				margin: 0;
 			}
-			// span{
-			// 	height: 3px;
-			// 	width: 365px;
-			// 	background-color: $pink-1;
-			// 	z-index: -1;
-			// 	position: absolute;
-			// 	top: auto;
-			// 	right: 0;
-			// }
 			.button{
 				background-color: $blue-2;
-				margin-top: 20px;
+				margin-top: get-vw(20px);
 			}
 		}
 		.image{
 			max-width: 0;
+			height: 100%;
+			display: flex;
+			align-items: center;
 			img{
-				transform: translate(-100px, 25vh);
+				transform: translate(get-vw(-100px), get-vw(150px));
+				width: get-vw(912px);
+				height: get-vw(759px);
 			}
 			span{
-				height: 2px;
-				width: 365px;
+				height: get-vw(2px);
+				width: get-vw(365px);
 				background-color: $pink-1;
 				z-index: -1;
 				position: absolute;
