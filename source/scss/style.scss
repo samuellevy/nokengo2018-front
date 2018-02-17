@@ -75,23 +75,10 @@ $lato-black: 'Lato Black';
 $lato-bold: 'Lato Bold';
 
 //responsive viewport
-$max-breakpoint: 1920;
-$stop: 0;
-
 @function get-vw($target) {
-  $vw-context: ($max-breakpoint * .01) * 1px;
-  @if ($stop < 1920px){
-    @return ($target/$vw-context) * 1vw;
-  }
-  @else{
-    @return $target;
-  }
+  $vw-context: (1920 * .01) * 1px;
+  @return ($target/$vw-context) * 1vw;
 }
-
-@media screen and (min-width: 1920px){
-  $stop: 1920px;
-}
-
 
 //default colors
 $white: #FFFFFF;
@@ -306,7 +293,6 @@ section{
 #header{
 	height: 100vh;
 	width: 100vw;
-	overflow-y: hidden;
 	display: flex;
 	flex-wrap: nowrap;
 	background: transparent linear-gradient(-41deg, #f2f5f8, #ebecee) top right/50% 100% no-repeat fixed;
@@ -342,24 +328,26 @@ section{
 			}
 		}
 		.image{
-			max-width: 0;
+			width: auto;
 			height: 100%;
 			display: flex;
-			align-items: center;
+      align-items: center;
+      position: relative;
 			img{
-				transform: translate(get-vw(-100px), get-vw(150px));
+				transform: translate(get-vw(-125px), get-vw(150px));
 				width: get-vw(912px);
-				height: get-vw(759px);
+        height: get-vw(759px);
+        position: absolute;
 			}
 			span{
 				height: get-vw(2px);
-				width: get-vw(365px);
+				width: get-vw(400px);
 				background-color: $pink-1;
-				z-index: -1;
-				position: absolute;
-				top: 50%;
-				right: 50%;
-				margin-top: 2.5%;
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: -60%;
+        margin-top: 5.5%;
 			}
 		}
 	}
