@@ -291,7 +291,7 @@ section{
 
 //header
 #header{
-	height: 100vh;
+	height: get-vw(1080px);
 	width: 100vw;
 	display: flex;
 	flex-wrap: nowrap;
@@ -361,37 +361,41 @@ section{
 		border-left: $border-default;
 		padding-bottom: 10%;
 		.t-intro{
-	    padding: 10% 0;
+	    padding: get-vw(120px) 0;
 			p{
 				font-size: $md-size;
-				width: 60%;
-				margin: 0 10%;
+				width: get-vw(750px);
+				margin: 0 get-vw(125px);
 			}
 		}
 		.t-content{
 		  display: flex;
 		  align-items: center;
 		  justify-content: center;
-			padding: 0 22px;
+			padding: 0 get-vw(22px);
 			.image{
 				position: relative;
         margin: 0 auto 0 0;
-				width: 490px;
-				height: 620px;
+				width: get-vw(489px);
+				height: get-vw(618px);
 				z-index: 0;
+				img{
+					width: get-vw(489px);
+					height: get-vw(618px);
+				}
 				.index{
-					font-size: 64px;
-			    font-family: "Lato Black";
+					font-size: $nm-size;
+			    font-family: $lato-black;
 					line-height: 1;
-					letter-spacing: 15px;
+					letter-spacing: get-vw(15px);
 			    color: #435877;
 			    position: absolute;
-			    bottom: -55px;
+			    bottom: get-vw(-55px);
 			    right: 0;
 					&:after{
 						content: "";
-						height: 65px;
-						width: 3px;
+						height: get-vw(65px);
+						width: get-vw(3px);
 						background-color: $pink-1;
 						position: absolute;
 						right: 0;
@@ -402,10 +406,10 @@ section{
 				position: relative;
 				width: 50%;
 				z-index: 1;
-				padding-left: 100px;
+				padding-left: get-vw(100px);
 				.t-title{
 			    width: 100%;
-			    padding-bottom: 30px;
+			    padding-bottom: get-vw(30px);
 				}
 				.t-paragraph{
 					padding-right: 20%;
@@ -516,6 +520,7 @@ section{
 			a{
 				color: $white;
 				font-size: 60px;
+				left: -30%;
 				padding: 0 15px;
 				line-height: 0;
 				overflow: hidden;
@@ -532,7 +537,6 @@ section{
 		color: $blue-1;
 		opacity: 0.1;
 		position: absolute;
-		left: -30%;
     top: 15%;
 		white-space: nowrap;
 	}
