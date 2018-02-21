@@ -133,7 +133,7 @@ section{
 
 .wrapper{
 	height: 100%;
-	width: 65vw;
+	width: 62.5vw;
 	margin: 0 auto;
 	position: relative;
 }
@@ -334,7 +334,7 @@ section{
       align-items: center;
       position: relative;
 			img{
-				transform: translate(get-vw(-125px), get-vw(150px));
+				transform: translate(get-vw(-90px), get-vw(150px));
 				width: get-vw(912px);
         height: get-vw(759px);
         position: absolute;
