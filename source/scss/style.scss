@@ -495,6 +495,8 @@ section{
 					justify-content: center;
 					img{
 						margin-bottom: get-vw(40px);
+						width: get-vw(150px);
+						height: get-vw(150px);
 					}
 					p{
 						position: absolute;
@@ -538,22 +540,23 @@ section{
 		color: $blue-1;
 		opacity: 0.1;
 		position: absolute;
-		top: 15%;
+		top: get-vw(90px);
 		white-space: nowrap;
+		left: get-vw(-600px);
 	}
 	.wrapper{
 		border-left: $border-default;
-		padding-bottom: 200px;
+		padding-bottom: get-vw(200px);
 		.intro{
-			padding: 10% 0;
+			padding: get-vw(125px) 0;
 			.text{
-				width: 70%;
+				width: get-vw(850px);
 				margin: auto;
 				.t-title{
-					padding: 12.5% 0 5%;
+					padding: get-vw(100px) 0 get-vw(50px);
 				}
 				.t-paragraph{
-					width: 65%;
+					width: get-vw(550px);
 					&:before{
 						display: none;
 					}
@@ -565,16 +568,16 @@ section{
 					width: fit-content;
 					margin: auto;
 					.line{
-						width: 2px;
-						height: 80px;
-						margin: 5% auto 15%;
+						width: get-vw(2px);
+						height: get-vw(125px);
+						margin: get-vw(20px) auto get-vw(30px);
 						background-color: $pink-1;
 					}
 					a{
 						color: $pink-1;
 						font-size: $sm-size;
 						font-family: $lato-bold;
-						margin: 10px 0;
+						margin: get-vw(10px) 0;
 					}
 				}
 			}
