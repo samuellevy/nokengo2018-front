@@ -14,7 +14,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -25,9 +25,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-  position: relative;
-  height: 100%;
-  width: 100%;
+	position: relative;
+	height: 100%;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -76,8 +76,8 @@ $lato-bold: 'Lato Bold';
 
 //responsive viewport
 @function get-vw($target) {
-  $vw-context: (1920 * .01) * 1px;
-  @return ($target/$vw-context) * 1vw;
+	$vw-context: (1920 * .01) * 1px;
+	@return ($target/$vw-context) * 1vw;
 }
 
 //default colors
@@ -116,11 +116,11 @@ html{
 }
 
 p, a{
-  font-family: $lato-regular;
-  font-size: $tx-size;
-  color: $gray-1;
-  line-height: 1.5;
-  text-align: left;
+	font-family: $lato-regular;
+	font-size: $tx-size;
+	color: $gray-1;
+	line-height: 1.5;
+	text-align: left;
 	padding: get-vw(15px) 0;
 }
 
@@ -139,24 +139,24 @@ section{
 }
 
 .button{
-  color: $white;
-  font-size: $bt-size;
-  font-family: $lato-regular;
+	color: $white;
+	font-size: $bt-size;
+	font-family: $lato-regular;
 	padding: get-vw(20px) get-vw(50px) get-vw(25px);
 	border-radius: 5px;
-  border: none;
-  display: inline-block;
-  outline: 0;
-  vertical-align: middle;
-  overflow: hidden;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  white-space: nowrap;
-  line-height: 1.5;
-  -webkit-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
-  -moz-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
-  box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
+	border: none;
+	display: inline-block;
+	outline: 0;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	line-height: 1.5;
+	-webkit-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
+	-moz-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
+	box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
 }
 
 .tag{
@@ -166,10 +166,10 @@ section{
 	letter-spacing: get-vw(1px);
 	text-transform: uppercase;
 	height: get-vw(55px);
-  position: absolute;
-  border-bottom: get-vw(2px) solid $blue-1;
+	position: absolute;
+	border-bottom: get-vw(2px) solid $blue-1;
 	transform: rotate(-90deg) translate(-100%, -100%);
-  transform-origin: 0% 0%;
+	transform-origin: 0% 0%;
 }
 
 .text{
@@ -205,22 +205,23 @@ section{
 
 //message
 #alert{
-  p{
-    font-size: $sm-size;
-  }
-  a{
-    color: $blue-2;
-    font-size: $xs-size;
-    font-weight: bold;
-    padding: 5px 0;
-    letter-spacing: 0.25px;
-    border-bottom: 1px solid $blue-2;
-  }
+	p{
+		font-size: $sm-size;
+	}
+	a{
+		color: $blue-2;
+		font-size: $xs-size;
+		font-weight: bold;
+		padding: 5px 0;
+		letter-spacing: 0.25px;
+		border-bottom: 1px solid $blue-2;
+	}
 }
 
 //menu
 #nav{
 	display: flex;
+	width: 100vw;
 	.navbar{
 		position: absolute;
 		width: get-vw(170px);
@@ -235,27 +236,27 @@ section{
 		}
 		span{
 			height: get-vw(3px);
-	    width: get-vw(30px);
-	    background-color: $blue-2;
-	    position: absolute;
-	    top: get-vw(30px);
-	    left: get-vw(98px);
+			width: get-vw(30px);
+			background-color: $blue-2;
+			position: absolute;
+			top: get-vw(30px);
+			left: get-vw(98px);
 			&:before{
 				content: "";
-		    position: absolute;
-		    height: get-vw(3px);
-		    width: get-vw(45px);
-		    background-color: $blue-2;
-		    top: get-vw(-15px);
+				position: absolute;
+				height: get-vw(3px);
+				width: get-vw(45px);
+				background-color: $blue-2;
+				top: get-vw(-15px);
 			}
 			&:after{
 				content: "";
-		    position: absolute;
-		    height: get-vw(3px);
-		    width: get-vw(45px);
-		    background-color: $blue-2;
-		    bottom: 0;
-		    top: get-vw(15px);
+				position: absolute;
+				height: get-vw(3px);
+				width: get-vw(45px);
+				background-color: $blue-2;
+				bottom: 0;
+				top: get-vw(15px);
 			}
 		}
 	}
@@ -295,7 +296,7 @@ section{
 	width: 100vw;
 	display: flex;
 	flex-wrap: nowrap;
-	background: transparent linear-gradient(-41deg, #f2f5f8, #ebecee) top right/50% 100% no-repeat fixed;
+	background: transparent linear-gradient(-41deg, #f2f5f8, #ebecee) top right/calc(50% - 1.14583vw) 100% no-repeat fixed;
 	border-bottom: $border-default;
 	.wrapper{
 		display: table;
@@ -331,28 +332,28 @@ section{
 			width: auto;
 			height: 100%;
 			display: flex;
-      align-items: center;
-      position: relative;
+			align-items: center;
+			position: relative;
 			img{
 				transform: translate(get-vw(-90px), get-vw(150px));
 				width: get-vw(912px);
-        height: get-vw(759px);
-        position: absolute;
+				height: get-vw(759px);
+				position: absolute;
 			}
 			span{
 				height: get-vw(2px);
 				width: get-vw(400px);
 				background-color: $pink-1;
-        z-index: -1;
-        position: absolute;
-        top: 50%;
-        left: -60%;
-        margin-top: 5.5%;
+				z-index: -1;
+				position: absolute;
+				top: 50%;
+				left: -60%;
+				margin-top: 5.5%;
 			}
 		}
 	}
-
-
+	
+	
 }
 
 //tecnologia
@@ -361,7 +362,7 @@ section{
 		border-left: $border-default;
 		padding-bottom: 10%;
 		.t-intro{
-	    padding: get-vw(120px) 0;
+			padding: get-vw(120px) 0;
 			p{
 				font-size: $md-size;
 				width: get-vw(750px);
@@ -369,13 +370,13 @@ section{
 			}
 		}
 		.t-content{
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			padding: 0 get-vw(22px);
 			.image{
 				position: relative;
-        margin: 0 auto 0 0;
+				margin: 0 auto 0 0;
 				width: get-vw(489px);
 				height: get-vw(618px);
 				z-index: 0;
@@ -385,13 +386,13 @@ section{
 				}
 				.index{
 					font-size: $nm-size;
-			    font-family: $lato-black;
+					font-family: $lato-black;
 					line-height: 1;
 					letter-spacing: get-vw(15px);
-			    color: #435877;
-			    position: absolute;
-			    bottom: get-vw(-55px);
-			    right: 0;
+					color: #435877;
+					position: absolute;
+					bottom: get-vw(-55px);
+					right: 0;
 					&:after{
 						content: "";
 						height: get-vw(65px);
@@ -408,23 +409,23 @@ section{
 				z-index: 1;
 				padding-left: get-vw(100px);
 				.t-title{
-			    width: 100%;
-			    padding-bottom: get-vw(30px);
+					width: 100%;
+					padding-bottom: get-vw(30px);
 				}
 				.t-paragraph{
-					padding-right: 20%;
+					padding-right: 6vw;
 					&:before{
-						top: -0.5px;
+						top: get-vw(-0.5px);
 						left: 0;
 					}
 					&:after{
-				    top: 0;
-				    left: -195px;
-				    width: 195px;
+						top: 0;
+						left: get-vw(-195px);
+						width: get-vw(195px);
 					}
 				}
 			}
-
+			
 			&:nth-child(odd){
 				.image{
 					margin: 0 0 0 auto;
@@ -445,23 +446,23 @@ section{
 
 //capacidades
 #capacidades{
-  background: transparent linear-gradient(0deg, $gray-3, $gray-3) top right/87.5% 100% no-repeat fixed;
+	background: transparent linear-gradient(0deg, $gray-3, $gray-3) top right/87.5% 100% no-repeat fixed;
 	.c-intro{
-		padding: 10% 0;
+		padding: get-vw(125px) 0;
 		.text{
-			width: 70%;
+			width: get-vw(850px);
 			margin: auto;
 			.t-title{
 				padding: 0;
 			}
 			.t-paragraph{
-				width: 65%;
+				width: get-vw(550px);
 				&:before{
-					bottom: -10px;
+					bottom: get-vw(-10px);
 					left: 0;
 				}
 				&:after{
-					bottom: -10px;
+					bottom: get-vw(-10px);
 					left: 0;
 					width: 100vw;
 				}
@@ -475,10 +476,10 @@ section{
 			list-style: none;
 			display: flex;
 			li{
-				width: 275px;
-				height: 275px;
+				width: get-vw(275px);
+				height: get-vw(275px);
 				background-color: $white;
-				margin-right: 22px;
+				margin-right: get-vw(22px);
 				display: inline-flex;
 				align-items: center;
 				justify-content: center;
@@ -493,11 +494,11 @@ section{
 					align-items: center;
 					justify-content: center;
 					img{
-						margin-bottom: 40px;
+						margin-bottom: get-vw(40px);
 					}
 					p{
 						position: absolute;
-						bottom: 20px;
+						bottom: get-vw(20px);
 						color: $blue-1;
 						font-family: $lato-bold;
 						font-size: $sm-size;
@@ -509,19 +510,19 @@ section{
 			}
 		}
 		.arrows{
-			height: 155px;
+			height: get-vw(155px);
 			width: 100%;
-			margin-top: 22px;
+			margin-top: get-vw(22px);
 			display: flex;
 			align-items: center;
 			background-color: $blue-3;
-			padding-left: 50px;
-	    box-sizing: border-box;
+			padding-left: get-vw(50px);
+			box-sizing: border-box;
 			a{
 				color: $white;
-				font-size: 60px;
+				font-size: get-vw(60px);
 				left: -30%;
-				padding: 0 15px;
+				padding: 0 get-vw(15px);
 				line-height: 0;
 				overflow: hidden;
 			}
@@ -537,7 +538,7 @@ section{
 		color: $blue-1;
 		opacity: 0.1;
 		position: absolute;
-    top: 15%;
+		top: 15%;
 		white-space: nowrap;
 	}
 	.wrapper{
@@ -549,7 +550,7 @@ section{
 				width: 70%;
 				margin: auto;
 				.t-title{
-			    padding: 12.5% 0 5%;
+					padding: 12.5% 0 5%;
 				}
 				.t-paragraph{
 					width: 65%;
@@ -583,7 +584,7 @@ section{
 
 //contato
 #contato{
-  background: transparent linear-gradient($gray-3, $gray-3) 0 150px/82.5% 100% no-repeat;
+	background: transparent linear-gradient($gray-3, $gray-3) 0 150px/82.5% 100% no-repeat;
 	.wrapper{
 		display: flex;
 		flex-wrap: wrap;
@@ -637,7 +638,7 @@ section{
 						font-family: $lato-regular;
 						color: $gray-1;
 						position: absolute;
-				    padding: 15px 0;
+						padding: 15px 0;
 						z-index: -1;
 					}
 				}
@@ -651,8 +652,8 @@ section{
 	.button{
 		background-color: $pink-1;
 		-webkit-box-shadow: 0px 5px 40px -15px $pink-1;
-	  -moz-box-shadow: 0px 5px 40px -15px $pink-1;
-	  box-shadow: 0px 5px 40px -15px $pink-1;
+		-moz-box-shadow: 0px 5px 40px -15px $pink-1;
+		box-shadow: 0px 5px 40px -15px $pink-1;
 	}
 }
 
@@ -661,7 +662,7 @@ section{
 	margin: 50px;
 	i{
 		font-size: 20px;
-	  color: $gray-1;
+		color: $gray-1;
 		opacity: 0.6;
 		padding: 0 25px;
 	}
