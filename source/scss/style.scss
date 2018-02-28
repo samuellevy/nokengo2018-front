@@ -229,45 +229,50 @@ section{
 		margin: get-vw(22px);
 		cursor: pointer;
 		z-index: 11;
+		display: flex;
 		img{
 			height: get-vw(70px);
 			width: auto;
-			position: absolute;
+			position: relative;
 		}
-		span{
-			height: get-vw(3px);
-			width: get-vw(30px);
-			background-color: $blue-2;
-			position: absolute;
-			top: get-vw(30px);
-			left: get-vw(98px);
-			&:before{
-				content: "";
-				position: absolute;
-				height: get-vw(3px);
-				width: get-vw(45px);
+		.bars{
+			position: relative;
+			height: get-vw(33px);
+			width: get-vw(45px);
+			display: flex;
+			padding: 0;
+			margin: auto;
+			span{
 				background-color: $blue-2;
-				top: get-vw(-15px);
-			}
-			&:after{
-				content: "";
 				position: absolute;
-				height: get-vw(3px);
-				width: get-vw(45px);
-				background-color: $blue-2;
-				bottom: 0;
-				top: get-vw(15px);
+				transition: transform .2s, top .2s .2s ease-in-out, opacity .05s .2s;
+				&:nth-child(1){
+					height: get-vw(3px);
+					width: get-vw(45px);
+					top: get-vw(0px);
+				}
+				&:nth-child(2){
+					height: get-vw(3px);
+					width: get-vw(30px);
+					top: get-vw(15px);
+				}
+				&:nth-child(3){
+					height: get-vw(3px);
+					width: get-vw(45px);
+					top: get-vw(30px);
+				}
 			}
 		}
 	}
 	.menu{
 		position: fixed;
 		z-index: 10;
-		overflow: hidden;
-		width: 0;
-		height: 100vw;
+		opacity: 0;
+		visibility: hidden;
+		width: 100vw;
 		background-color: $blue-1-op;
-		transition: all 0.5s linear;
+		transition: visibility .1s .5s, opacity .5s .2s;
+		
 		ul{
 			list-style: none;
 			padding: 5vw 0;
@@ -279,13 +284,40 @@ section{
 					color: $white;
 					text-align: center;
 					white-space: nowrap;
+					opacity: 0;
+					transition: opacity .2s;
+					
 				}
 			}
 		}
 	}
 	&:hover{
+		.navbar .bars span{
+			transition: top .2s, transform .2s .2s ease-in-out, opacity .05s .2s;
+			&:nth-child(1){
+				top: get-vw(15px);
+				transform: rotate(-45deg);
+			}
+			&:nth-child(2){
+				opacity: 0;
+			}
+			&:nth-child(3){
+				top: get-vw(15px);
+				transform: rotate(45deg);
+			}
+		}
 		.menu{
-			width: 100vw;
+			opacity: 1;
+			visibility: visible;
+			transition: visibility .1s, opacity .5s;
+			ul{
+				a{
+					li{
+						opacity: 1;
+						transition: opacity .2s .5s;
+					}
+				}
+			}
 		}
 	}
 }
