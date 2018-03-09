@@ -270,6 +270,7 @@ section{
 		opacity: 0;
 		visibility: hidden;
 		width: 100vw;
+		height: 100vw;
 		background-color: $blue-1-op;
 		transition: visibility .1s .5s, opacity .5s .2s;
 		
@@ -291,7 +292,7 @@ section{
 			}
 		}
 	}
-	&:hover{
+	&.active{
 		.navbar .bars span{
 			transition: top .2s, transform .2s .2s ease-in-out, opacity .05s .2s;
 			&:nth-child(1){
