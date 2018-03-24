@@ -122,6 +122,9 @@ p, a{
 	line-height: 1.5;
 	text-align: left;
 	padding: get-vw(15px) 0;
+	@media screen and (max-width:768px){
+		padding: 5px 0;
+	}
 }
 
 section{
@@ -164,8 +167,10 @@ section{
 		font-size: 22px;
 		height: unset;
 		line-height: 1;
-		padding: 15px;
+		padding: 15px 30px;
 		overflow: visible;
+		width: fit-content;
+		margin: auto;
 	}
 }
 
@@ -398,7 +403,9 @@ section{
 				margin-top: get-vw(20px);
 				@media screen and (max-width: 768px){
 					font-size: 20px;
-					width: 50%;
+					width: 70%;
+					margin: 20px auto;
+					text-align: center;
 				}
 			}
 			.h-title{
@@ -410,12 +417,16 @@ section{
 				margin: 0;
 				@media screen and (max-width: 768px){
 					font-size: 72px;
-					width: 80%;
+					width: 100%;
+					text-align: center;
 				}
 			}
 			.button{
 				background-color: $blue-2;
 				margin-top: get-vw(20px);
+				@media screen and (max-width: 768px){
+					margin: auto;
+				}
 			}
 			@media screen and (max-width: 768px){
 				width: 100%;
@@ -435,6 +446,12 @@ section{
 				width: get-vw(912px);
 				height: get-vw(759px);
 				position: absolute;
+				@media screen and (max-width: 768px){
+					position: relative;
+					transform: translate(0, 0);
+					width: 70%;
+					height: 70%;
+				}
 			}
 			span{
 				height: get-vw(2px);
@@ -445,21 +462,26 @@ section{
 				top: 50%;
 				left: -60%;
 				margin-top: 5.5%;
+				@media screen and (max-width: 768px){
+					display: none;
+				}
 			}
 			@media screen and (max-width: 768px){
 				width: 100%;
-				img{
-					position: relative;
-				}
+				justify-content: center;
+				margin-top: 50px;
 			}
 		}
 		@media screen and (max-width: 768px){
 			display: flex;
 			flex-direction: column;
+			padding: 0;
 		}
 	}
 	@media screen and (max-width: 768px){
 		background: none;
+		height: 100%;
+		padding-top: 100px;
 	}
 }
 
