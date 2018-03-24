@@ -194,6 +194,10 @@ section{
 		color: $blue-1;
 		line-height: 0.9;
 		position: relative;
+		@media screen and (max-width: 768px) {
+			font-size: 36px;
+			line-height: 1;
+		}
 	}
 	.t-paragraph{
 		margin-left: get-vw(95px);
@@ -214,6 +218,9 @@ section{
 			position: absolute;
 			background-color: $gray-2;
 			z-index: 1;
+		}
+		@media screen and (max-width: 768px) {
+			font-size: 18px;
 		}
 	}
 }
@@ -448,7 +455,7 @@ section{
 				position: absolute;
 				@media screen and (max-width: 768px){
 					position: relative;
-					transform: translate(0, 0);
+					transform: translate(0, 25px);
 					width: 70%;
 					height: 70%;
 				}
@@ -470,6 +477,7 @@ section{
 				width: 100%;
 				justify-content: center;
 				margin-top: 50px;
+				background: linear-gradient(-41deg, #f2f5f8, #ebecee);
 			}
 		}
 		@media screen and (max-width: 768px){
@@ -482,6 +490,7 @@ section{
 		background: none;
 		height: 100%;
 		padding-top: 100px;
+		
 	}
 }
 
@@ -496,6 +505,12 @@ section{
 				font-size: $md-size;
 				width: get-vw(750px);
 				margin: 0 get-vw(125px);
+				@media screen and (max-width: 768px) {
+					font-size: 20px;
+					width: 80%;
+					margin: 0 auto;
+					text-align: center;
+				}
 			}
 		}
 		.t-content{
@@ -512,6 +527,12 @@ section{
 				img{
 					width: get-vw(489px);
 					height: get-vw(618px);
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						object-position: center;
+					}
 				}
 				.index{
 					font-size: $nm-size;
@@ -530,6 +551,21 @@ section{
 						position: absolute;
 						right: 0;
 					}
+					@media screen and (max-width: 768px) {
+						font-size: 45px;
+						bottom: -25px;
+						letter-spacing: 10px;
+						&:after{
+							height: 45px;
+							width: 2px;
+						}
+					}
+				}
+				@media screen and (max-width: 768px) {
+					padding: 0;
+					width: 80%;
+					margin: auto;
+					height: 250px;
 				}
 			}
 			.text{
@@ -540,6 +576,10 @@ section{
 				.t-title{
 					width: 100%;
 					padding-bottom: get-vw(30px);
+					@media screen and (max-width: 768px) {
+						padding-bottom: 15px;
+						text-align: right;
+					}
 				}
 				.t-paragraph{
 					padding-right: 6vw;
@@ -552,7 +592,24 @@ section{
 						left: get-vw(-195px);
 						width: get-vw(195px);
 					}
+					@media screen and (max-width: 768px) {
+						width: 100%;
+						margin: 0;
+						padding: 0;
+						text-align: right;
+						&:before, &:after{
+							display: none;
+						}
+					}
 				}
+				@media screen and (max-width: 768px) {
+					width: 80%;
+					padding: 40px 0;
+				}
+			}
+			@media screen and (max-width: 768px) {
+				padding: 0;
+				flex-direction: column;
 			}
 			
 			&:nth-child(odd){
@@ -565,6 +622,30 @@ section{
 							left: auto;
 							right: 0;
 							width: 100%;
+						}
+					}
+				}
+				@media screen and (max-width: 768px) {
+					.image{
+						order: 1;
+						margin: auto;
+						.index{
+							left: 0;
+							right: unset;
+							padding-left: 10px;
+							&:after{
+								right: unset;
+    							left: 0;
+							}
+						}
+					}
+					.text{
+						order: 2;
+						.t-title{
+							text-align: left;
+						}
+						.t-paragraph{
+							text-align: left;
 						}
 					}
 				}
