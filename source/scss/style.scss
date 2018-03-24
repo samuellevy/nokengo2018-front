@@ -136,6 +136,9 @@ section{
 	width: 62.5vw;
 	margin: 0 auto;
 	position: relative;
+	@media screen and (max-width: 768px){
+		width: 100vw;
+	}
 }
 
 .button{
@@ -157,6 +160,13 @@ section{
 	-webkit-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
 	-moz-box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
 	box-shadow: 0 get-vw(5px) get-vw(40px) get-vw(-15px) $blue-2;
+	@media screen and (max-width: 768px){
+		font-size: 22px;
+		height: unset;
+		line-height: 1;
+		padding: 15px;
+		overflow: visible;
+	}
 }
 
 .tag{
@@ -194,7 +204,7 @@ section{
 		&:after{
 			content: "";
 			z-index: -1;
-			height: get-vw(1px);
+			height: get-vw(1.5px);
 			width: 100%;
 			position: absolute;
 			background-color: $gray-2;
@@ -236,13 +246,13 @@ section{
 			position: relative;
 			@media screen and (max-width: 768px){
 				order: 2;
-				height: 40px;
+				height: 50px;
 			}
 		}
 		@media screen and (max-width: 768px){
-			width: 85px;
-			height: 40px;
-			margin: 10px;
+			width: 105px;
+			height: 50px;
+			margin: 15px;
 		}
 		.bars{
 			position: relative;
@@ -253,6 +263,8 @@ section{
 			margin: auto;
 			@media screen and (max-width: 768px){
 				order: 1;
+				height: 26px;
+				width: 32px;
 			}
 			span{
 				background-color: $blue-2;
@@ -262,19 +274,32 @@ section{
 					height: get-vw(3px);
 					width: get-vw(45px);
 					top: get-vw(0px);
+					@media screen and (max-width: 768px){
+						height: 2px;
+						width: 100%;
+						top: 0;
+					}
 				}
 				&:nth-child(2){
 					height: get-vw(3px);
 					width: get-vw(30px);
-					top: get-vw(15px);
+					top: get-vw(14px);
 					@media screen and (max-width: 768px){
-						right: 0;
+						right: 1px;
+						height: 2px;
+						width: 70%;
+						top: 12px;
 					}
 				}
 				&:nth-child(3){
 					height: get-vw(3px);
 					width: get-vw(45px);
 					top: get-vw(30px);
+					@media screen and (max-width: 768px){
+						height: 2px;
+						width: 100%;
+						top: 24px;
+					}
 				}
 			}
 		}
@@ -316,6 +341,9 @@ section{
 			&:nth-child(1){
 				top: get-vw(15px);
 				transform: rotate(-45deg);
+				@media screen and (max-width: 768px){
+					top: 12px;
+				}
 			}
 			&:nth-child(2){
 				opacity: 0;
@@ -323,6 +351,9 @@ section{
 			&:nth-child(3){
 				top: get-vw(15px);
 				transform: rotate(45deg);
+				@media screen and (max-width: 768px){
+					top: 12px;
+				}
 			}
 		}
 		.menu{
@@ -365,6 +396,10 @@ section{
 				line-height: 1.25;
 				width: 80%;
 				margin-top: get-vw(20px);
+				@media screen and (max-width: 768px){
+					font-size: 20px;
+					width: 50%;
+				}
 			}
 			.h-title{
 				font-family: $lato-black;
@@ -373,10 +408,20 @@ section{
 				line-height: 0.8;
 				width: 200%;
 				margin: 0;
+				@media screen and (max-width: 768px){
+					font-size: 72px;
+					width: 80%;
+				}
 			}
 			.button{
 				background-color: $blue-2;
 				margin-top: get-vw(20px);
+			}
+			@media screen and (max-width: 768px){
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
 			}
 		}
 		.image{
@@ -401,10 +446,21 @@ section{
 				left: -60%;
 				margin-top: 5.5%;
 			}
+			@media screen and (max-width: 768px){
+				width: 100%;
+				img{
+					position: relative;
+				}
+			}
+		}
+		@media screen and (max-width: 768px){
+			display: flex;
+			flex-direction: column;
 		}
 	}
-	
-	
+	@media screen and (max-width: 768px){
+		background: none;
+	}
 }
 
 //tecnologia
@@ -691,6 +747,8 @@ section{
 					}
 					textarea{
 						height: get-vw(125px);
+						min-height: get-vw(125px);
+						max-height: get-vw(200px);
 					}
 					label{
 						font-size: $sm-size;
