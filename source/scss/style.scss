@@ -171,6 +171,11 @@ section{
 		overflow: visible;
 		width: fit-content;
 		margin: auto;
+		border-radius: 3px;
+		box-sizing: border-box;
+	}
+	@media screen and (max-width: 510px){
+    	font-size: 18px;
 	}
 }
 
@@ -197,6 +202,10 @@ section{
 		@media screen and (max-width: 768px) {
 			font-size: 36px;
 			line-height: 1;
+		}
+		@media screen and (max-width: 510px) {
+			font-size: 28px;
+    		line-height: 1.2;
 		}
 	}
 	.t-paragraph{
@@ -225,6 +234,9 @@ section{
 			&:after, &:before{
 				display: none;
 			}
+		}
+		@media screen and (max-width: 510px) {
+			font-size: 16px;
 		}
 	}
 }
@@ -264,11 +276,17 @@ section{
 				order: 2;
 				height: 50px;
 			}
+			@media screen and (max-width: 510px){
+				height: 45px;
+			}
 		}
 		@media screen and (max-width: 768px){
 			width: 105px;
 			height: 50px;
 			margin: 15px;
+		}
+		@media screen and (max-width: 510px){
+			height: 45px;
 		}
 		.bars{
 			position: relative;
@@ -411,10 +429,15 @@ section{
 				width: 80%;
 				margin-top: get-vw(20px);
 				@media screen and (max-width: 768px){
+					line-height: 1.5;
 					font-size: 20px;
 					width: 70%;
-					margin: 20px auto;
+    				margin: 10px auto 20px;
 					text-align: center;
+				}
+				@media screen and (max-width: 510px){
+					font-size: 18px;
+					width: 80%;
 				}
 			}
 			.h-title{
@@ -426,8 +449,13 @@ section{
 				margin: 0;
 				@media screen and (max-width: 768px){
 					font-size: 72px;
-					width: 100%;
+					width: 90%;
+					margin: auto;
 					text-align: center;
+					line-height: 1;
+				}
+				@media screen and (max-width: 510px){
+					font-size: 56px;
 				}
 			}
 			.button{
@@ -436,12 +464,16 @@ section{
 				@media screen and (max-width: 768px){
 					margin: auto;
 				}
+				@media screen and (max-width: 510px){
+					width: 80%;
+				}
 			}
 			@media screen and (max-width: 768px){
 				width: 100%;
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
+				position: relative;
 			}
 		}
 		.image{
@@ -460,6 +492,10 @@ section{
 					transform: translate(0, 25px);
 					width: 70%;
 					height: 70%;
+				}
+				@media screen and (max-width: 510px){
+					width: 90%;
+					height: 90%;
 				}
 			}
 			span{
@@ -513,6 +549,9 @@ section{
 					margin: 0 auto;
 					text-align: center;
 				}
+				@media screen and (max-width: 510px) {
+					font-size: 18px;
+				}
 			}
 		}
 		.t-content{
@@ -562,12 +601,22 @@ section{
 							width: 2px;
 						}
 					}
+					@media screen and (max-width: 510px) {
+						font-size: 35px;
+						bottom: -20px;
+						&:after{
+							height: 35px;
+						}
+					}
 				}
 				@media screen and (max-width: 768px) {
 					padding: 0;
 					width: 80%;
 					margin: auto;
 					height: 250px;
+				}
+				@media screen and (max-width: 510px) {
+					height: 180px;
 				}
 			}
 			.text{
@@ -821,6 +870,9 @@ section{
 							height: 70px;
 							margin: 0 auto 15px;
 						}
+						@media screen and (max-width:510px){
+							height: 50px;
+						}
 					}
 					a{
 						color: $pink-1;
@@ -831,6 +883,9 @@ section{
 							font-size: 16px;
 							padding: 0;
 							margin: 0;
+						}
+						@media screen and (max-width:510px){
+							font-size: 14px;
 						}
 					}
 				}
@@ -892,6 +947,8 @@ section{
 					position: relative;
 					display: flex;
 					z-index: 1;
+					height: get-vw(50px);
+					margin: 0 0 get-vw(30px);
 					input, textarea{
 						font-size: $sm-size;
 						font-family: $lato-regular;
@@ -901,41 +958,62 @@ section{
 						border-bottom: get-vw(2px) solid $pink-1;
 						width: 100%;
 						padding: get-vw(15px) 0;
-						margin-bottom: get-vw(20px);
 						box-sizing: border-box;
 						height: get-vw(50px);
 						outline: none;
+						margin: 0;
+						position: absolute;
+						bottom: 0;
 						@media screen and (max-width: 768px){
 							font-size: 16px;
 							border-bottom: 2px solid $pink-1;
-							padding: 5px 0;
+							padding: 9px 0;
 							line-height: 1;
-							margin-bottom: 20px;
-							height: 40px;
+							height: 100%;
 						}
 					}
 					textarea{
-						height: get-vw(125px);
-						min-height: get-vw(125px);
-						max-height: get-vw(200px);
-						@media screen and (max-width:768px){
-							height: 70px;
-							min-height: 70px;
-							max-height: 140px;
-							padding-top: 11px;
-						}
+						height: 100%;
+						min-height: 100%;
+						max-height: 100%;
+						margin: 0;
+						position: absolute;
+						bottom: 0;
 					}
 					label{
 						font-size: $sm-size;
 						font-family: $lato-regular;
 						color: $gray-1;
-						position: absolute;
 						padding: get-vw(15px) 0;
-						line-height: 1.25;
+						line-height: 1;
 						z-index: -1;
+						position: absolute;
+						bottom: 0;
 						@media screen and (max-width:768px){
-						    font-size: 16px;
+							font-size: 16px;
 							padding: 9px 0;
+						}
+					}
+					@media screen and (max-width:768px){
+						height: 40px;
+						margin: 0 0 20px;
+					}
+					@media screen and (max-width:510px){
+						margin: 0 0 30px;
+					}
+					&[data-name="textarea"]{
+						height: get-vw(100px);
+						margin: 0 0 get-vw(50px);
+						label{
+							bottom: unset;
+							top: 0;
+						}
+						@media screen and (max-width:768px){
+						    height: 80px;
+							margin: 0 0 50px;
+						}
+						@media screen and (max-width:510px){
+							margin: 0 0 30px;
 						}
 					}
 				}
@@ -963,6 +1041,9 @@ section{
 					object-fit: cover;
 					object-position: center;
 				}
+				@media screen and (max-width: 768px){
+					height: 180px;
+				}
 			}
 			@media screen and (max-width: 768px){
 				width: 80%;
@@ -983,6 +1064,10 @@ section{
 		@media screen and (max-width: 768px){
 			margin: 20px auto;
 			float: right;
+		}
+		@media screen and (max-width: 510px){
+			float: none;
+			width: 100%;
 		}
 	}
 	@media screen and (max-width:768px){
