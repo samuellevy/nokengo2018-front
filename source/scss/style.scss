@@ -82,15 +82,15 @@ $lato-bold: 'Lato Bold';
 
 //default colors
 $white: #FFFFFF;
-$blue-1: #435877;
-$blue-2: #009fe2;
-$blue-3: #7fcff0;
+$blue-1: #FF0589;
+$blue-2: #FF0589;
+$blue-3: #ffe4f3;
 $blue-4: #a1caff;
 $cyan: #75f7db;
-$gray-1: #7e8f9a;
+$gray-1: #9a7e8b;
 $gray-2: #ededf7;
-$gray-3: #f8f8f9;
-$pink-1: #f13164;
+$gray-3: #f9f8f9;
+$pink-1: #FF0589;
 $pink-2: #f8d8ff;
 $salmon: #fdb092;
 $yellow: #fae822;
@@ -410,7 +410,7 @@ section{
 	width: 100vw;
 	display: flex;
 	flex-wrap: nowrap;
-	background: transparent linear-gradient(-41deg, #f2f5f8, #ebecee) top right/calc(50% - 1.14583vw) 100% no-repeat fixed;
+	background: transparent linear-gradient(-41deg, #f8f2f8, #eeebee) top right/calc(50% - 1.14583vw) 100% no-repeat fixed;
 	border-bottom: $border-default;
 	.wrapper{
 		display: table;
