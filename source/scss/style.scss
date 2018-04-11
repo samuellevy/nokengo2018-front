@@ -926,7 +926,7 @@ section{
 			}
 			.t-paragraph{
 				width: 70%;
-				padding-top: get-vw(30px);
+				padding: get-vw(30px) 0;
 				&:before{
 					top: 0;
 				}
@@ -949,11 +949,11 @@ section{
 					display: flex;
 					z-index: 1;
 					height: get-vw(50px);
-					margin: 0 0 get-vw(30px);
+					margin: 0 0 get-vw(40px);
 					input, textarea{
 						font-size: $sm-size;
 						font-family: $lato-regular;
-						color: $gray-1;
+						color: $blue-1;
 						background: none;
 						border: none;
 						border-bottom: get-vw(2px) solid $pink-1;
@@ -965,6 +965,17 @@ section{
 						margin: 0;
 						position: absolute;
 						bottom: 0;
+						outline: none;
+						&:valid{
+							& + label {
+								bottom: get-vw(35px);
+								font-size: $xs-size;
+								transition: all .1s linear;
+							}
+							&:focus + label {
+								color: $pink-1;
+							}							
+						}
 						@media screen and (max-width: 768px){
 							font-size: 16px;
 							border-bottom: 2px solid $pink-1;
@@ -980,16 +991,23 @@ section{
 						margin: 0;
 						position: absolute;
 						bottom: 0;
+						&:valid{
+							& + label {
+								bottom: 0;
+								top: get-vw(-40px);
+							}					
+						}
 					}
 					label{
 						font-size: $sm-size;
 						font-family: $lato-regular;
 						color: $gray-1;
 						padding: get-vw(15px) 0;
-						line-height: 1;
+						line-height: 1.2;
 						z-index: -1;
 						position: absolute;
 						bottom: 0;
+						transition: all .1s linear;
 						@media screen and (max-width:768px){
 							font-size: 16px;
 							padding: 9px 0;
