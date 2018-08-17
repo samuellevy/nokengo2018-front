@@ -45,6 +45,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.to-screen{
+	cursor: pointer;
+}
 
 @font-face {
 	font-family: 'Lato Regular';
@@ -187,10 +190,17 @@ section{
 	letter-spacing: get-vw(1px);
 	text-transform: uppercase;
 	height: get-vw(55px);
-	position: absolute;
 	border-bottom: get-vw(2px) solid $blue-1;
 	transform: rotate(-90deg) translate(-100%, -100%);
 	transform-origin: 0% 0%;
+	&.absolute{
+		position: absolute;
+	}
+	&.fixed{
+		position: fixed;
+		top: get-vw(35px);
+		transition: top 1s;
+	}
 }
 
 .text{
@@ -792,7 +802,7 @@ section{
 			margin-top: get-vw(22px);
 			display: flex;
 			align-items: center;
-			background-color: $blue-3;
+			// background-color: $blue-3;
 			padding-left: get-vw(50px);
 			box-sizing: border-box;
 			a{
@@ -907,6 +917,8 @@ section{
 //contato
 #contato{
 	background: transparent linear-gradient($gray-3, $gray-3) 0 7.5vw/82.5% 100% no-repeat;
+	// background-color: #fff;
+	min-height: 100vh;
 	.wrapper{
 		display: flex;
 		flex-wrap: wrap;
