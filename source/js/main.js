@@ -42,11 +42,13 @@ var basics = {
             pages['inovacao'] = $('#labs').offset().top;
             pages['contato'] = $('#contato').offset().top;
             
-            if(scroll < tecnologia){
+            if(scroll < pages['tecnologia']){
                 screen = 'home';
+                $('.navbar').removeClass('right');
             }
-            else if(scroll >  pages['tecnologia'] && scroll <  pages['capacidades']){
+            else if(scroll > pages['tecnologia'] && scroll <  pages['capacidades']){
                 screen = 'tecnologia';
+                $('.navbar').addClass('right');
             }
             else if(scroll >  pages['capacidades'] && scroll <  pages['inovacao']){
                 screen = 'capacidades';

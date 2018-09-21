@@ -279,6 +279,20 @@ section{
 		cursor: pointer;
 		z-index: 11;
 		display: flex;
+		position: fixed;
+		@media screen and (min-width: 768px){
+			transition: all 2s;
+			-webkit-transition: all 2s;
+			left: get-vw(350px);
+		}
+		
+		&.right{
+			@media screen and (min-width: 768px){
+				left: get-vw(1600px);
+				transition: all 2s;
+				-webkit-transition: all 2s;
+			}
+		}
 		img{
 			height: get-vw(70px);
 			width: auto;
