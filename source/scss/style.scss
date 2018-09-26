@@ -179,7 +179,7 @@ section{
 		box-sizing: border-box;
 	}
 	@media screen and (max-width: 510px){
-    	font-size: 18px;
+		font-size: 18px;
 	}
 }
 
@@ -216,7 +216,10 @@ section{
 		}
 		@media screen and (max-width: 510px) {
 			font-size: 28px;
-    		line-height: 1.2;
+			line-height: 1.2;
+		}
+		&.white{
+			color: $white
 		}
 	}
 	.t-paragraph{
@@ -457,7 +460,7 @@ section{
 					line-height: 1.5;
 					font-size: 20px;
 					width: 70%;
-    				margin: 10px auto 20px;
+					margin: 10px auto 20px;
 					text-align: center;
 				}
 				@media screen and (max-width: 510px){
@@ -707,7 +710,7 @@ section{
 							padding-left: 10px;
 							&:after{
 								right: unset;
-    							left: 0;
+								left: 0;
 							}
 						}
 					}
@@ -1054,7 +1057,7 @@ section{
 							top: 0;
 						}
 						@media screen and (max-width:768px){
-						    height: 80px;
+							height: 80px;
 							margin: 0 0 50px;
 						}
 						@media screen and (max-width:510px){
@@ -1144,5 +1147,24 @@ section{
 	}
 	@media screen and (max-width: 768px){
 		margin: 30px 0;
+	}
+}
+
+.modal{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(28,142,221,.7);
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle; align-items: center;
+	opacity: 1;
+	
+	&.disactivated{
+		opacity: 0;
+		display: none;
 	}
 }

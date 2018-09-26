@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nokengo</title>
-    <link rel="icon" type="image/png" href="images/nokengo_logo_ciano.png">
+    <link rel="icon" type="image/png" href="./images/nokengo_logo_ciano.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +18,7 @@
     <section id="nav">
       <div class="wrapper">
         <div class="navbar">
-          <img src="/images/nokengo_logo_ciano.png" alt="Nokengo logo">
+          <img src="./images/nokengo_logo_ciano.png" alt="Nokengo logo">
           <a href="#" class="bars">
             <span></span>
             <span></span>
@@ -66,7 +66,7 @@
         </div>
         <div class="t-content" data-id="1">
           <div class="image">
-            <img src="images/tech1.png" alt="image">
+            <img src="./images/tech1.png" alt="image">
             <p class="index">1</p>
           </div>
           <div class="text">
@@ -80,13 +80,13 @@
             <p class="t-paragraph">Desenvolvemos soluções inovadoras para sua empresa e adaptamos para ficar mais próximo às suas necessidades.</p>
           </div>
           <div class="image">
-            <img src="images/tech2.png" alt="image">
+            <img src="./images/tech2.png" alt="image">
             <p class="index">2</p>
           </div>
         </div>
         <div class="t-content" data-id="3">
           <div class="image">
-            <img src="images/tech3.png" alt="image">
+            <img src="./images/tech3.png" alt="image">
             <p class="index">3</p>
           </div>
           <div class="text">
@@ -109,15 +109,15 @@
       </div>
       <div class="items">
         <ul>
-          <li><div class="li-content"><img src="/images/item1.png" alt="item"><p>Desenvolvimento de marca</p></div></li>
-          <li><div class="li-content"><img src="/images/item2.png" alt="item"><p>Conteúdo interativo</p></div></li>
-          <li><div class="li-content"><img src="/images/item3.png" alt="item"><p>Design de experiência</p></div></li>
-          <li><div class="li-content"><img src="/images/item4.png" alt="item"><p>Tecnologia</p></div></li>
-          <li><div class="li-content"><img src="/images/item5.png" alt="item"><p>Suporte ao cliente</p></div></li>
+          <li><div class="li-content"><img src="./images/item1.png" alt="item"><p>Desenvolvimento de marca</p></div></li>
+          <li><div class="li-content"><img src="./images/item2.png" alt="item"><p>Conteúdo interativo</p></div></li>
+          <li><div class="li-content"><img src="./images/item3.png" alt="item"><p>Design de experiência</p></div></li>
+          <li><div class="li-content"><img src="./images/item4.png" alt="item"><p>Tecnologia</p></div></li>
+          <li><div class="li-content"><img src="./images/item5.png" alt="item"><p>Suporte ao cliente</p></div></li>
         </ul>
         <div class="arrows">
-          <!-- <a href="#"><img src="/images/l-arrow.png" alt="left"> </a>
-          <a href="#"><img src="/images/r-arrow.png" alt="right"> </a> -->
+          <!-- <a href="#"><img src="./images/l-arrow.png" alt="left"> </a>
+          <a href="#"><img src="./images/r-arrow.png" alt="right"> </a> -->
         </div>
       </div>
     </section>
@@ -145,24 +145,24 @@
         <div class="text">
           <p class="t-title">Vamos trabalhar juntos?</p>
           <p class="t-paragraph">Fale digital e comunique-se com o resto do mundo. Mande um e-mail para gente. Nós podemos te ajudar!</p>
-          <form>
+          <form class='contact' method="post" accept-charset="utf-8">
             <fieldset>
-              <input type="text" name="name" required>
+              <input type="text" name="name" class="contact_name" required>
               <label for="name">Seu nome</label>
             </fieldset>
             <fieldset>
-              <input type="text" name="contact" required>
+              <input type="text" name="email" class="contact_email" required>
               <label for="contact">Seu contato, pode ser um e-mail ou telefone</label>
             </fieldset>
             <fieldset data-name="textarea">
-              <textarea name="message" required></textarea>
+              <textarea name="message" class="contact_message" required></textarea>
               <label for="message">Precisando de ajuda? <br>Nos mande sua mensagem aqui.</label>
             </fieldset>
             <input type="submit" class="button" value="Enviar mensagem">
           </form>
         </div>
         <div class="image">
-          <img src="/images/contact.png" alt="contato">
+          <img src="./images/contact.png" alt="contato">
         </div>
       </div>
     </section>
@@ -171,5 +171,11 @@
       <i class="fa fa-twitter"></i>
       <p>contato@nokengo.com.br</p>
     </section>
+
+    <div class='modal disactivated'>
+      <div class='text'>
+        <p class="t-title white modal-message">Enviado com sucesso!</p>
+      </div>
+    </div>
   </body>
 </html>

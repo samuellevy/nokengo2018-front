@@ -1,10 +1,9 @@
-// $(document).ready(function(){
-//     $(".navbar").click(function(){
-//         $("#nav").toggleClass('active');
-//     });
-// });
-
 var basics = {
+    init: function() {
+        basics.navBar();
+        basics.clickNavigation();
+        basics.scrollControl();
+    },
     navBar: function(){
         $(".navbar").click(function(){
             $("#nav").toggleClass('active');
@@ -18,7 +17,7 @@ var basics = {
             $('html,body').animate({scrollTop: position},'slow');
             $("#nav").toggleClass('active');
         });
-
+        
         $(".to-screen").click(function(){
             event.preventDefault();
             section = $(this).attr('data-href');
@@ -57,7 +56,7 @@ var basics = {
                 if (st > lastScrollTop){
                     to = before;
                 } else {
-                   to = after;
+                    to = after;
                 }
                 $('.tag[data-screen='+to+']').removeClass('fixed');
                 $('.tag[data-screen='+to+']').addClass('absolute');
@@ -69,7 +68,7 @@ var basics = {
                 if (st > lastScrollTop){
                     to = before;
                 } else {
-                   to = after;
+                    to = after;
                 }
                 // $('.tag[data-screen='+to+']').removeClass('fixed');
                 // $('.tag[data-screen='+to+']').addClass('absolute');
@@ -80,16 +79,16 @@ var basics = {
                 if (st > lastScrollTop){
                     to = before;
                 } else {
-                   to = after;
+                    to = after;
                 }
                 // $('.tag[data-screen='+to+']').removeClass('fixed');
                 $('.tag[data-screen='+to+']').addClass('absolute');
             }
-
+            
             if(screen != old_screen){
                 $('.tag[data-screen='+old_screen+']').removeClass('fixed');
                 $('.tag[data-screen='+old_screen+']').addClass('absolute');
-
+                
                 $('.tag[data-screen='+screen+']').removeClass('absolute');
                 $('.tag[data-screen='+screen+']').addClass('fixed');
                 old_screen = screen;
@@ -97,19 +96,58 @@ var basics = {
             }else{
                 console.log('igual');
             }
-
+            
             console.log(scroll + ' - ' + screen + ' - ' + old_screen);
             lastScrollTop = st;
         });
+    }
+}
+
+var form = {
+    webservice: 'http://localhost/nokengo-back/api/public/contact',
+    init: function(){
+        this.click_listener();
     },
-    
-    init: function() {
-        basics.navBar();
-        basics.clickNavigation();
-        basics.scrollControl();
+    click_listener: function(){
+        $('form.contact').submit(function(){
+            event.preventDefault();
+            body = JSON.stringify({
+                "name" : $('.contact_name').val(),
+                "email" : $('.contact_email').val(),
+                "message" : $('.contact_message').val()
+            });
+            $('.modal-message').html('Enviando mensagem...');
+            
+            $('.modal').toggleClass('disactivated');
+            $('.modal').show();
+            
+            form.send_form(body).then((rest)=>{
+                setTimeout(function () {
+                    $('.modal-message').html('Mensagem enviada!');
+                }, 3000);
+                clearTimeout();
+                setTimeout(function () {
+                    $('.modal').fadeOut();
+                    $('.modal').toggleClass('disactivated');
+                }, 5000);
+            });
+        });
+    },
+    send_form: function(body){
+        var url = form.webservice;
+        var object = {
+            method: 'post',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: body,
+        };
+        return fetch(url, object).then((res) => res.json());
     }
 }
 
 $(document).ready(function() {
     basics.init();
+    form.init();
 });
