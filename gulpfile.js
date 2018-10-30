@@ -45,7 +45,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('pages', function() {
-	gulp.src(source + '/*.html')
+  gulp.src(source + '/*.html')
+  gulp.src(source + '/*.php')
 	.pipe(gulp.dest(target))
 	.pipe(browserSync.stream());
 });
