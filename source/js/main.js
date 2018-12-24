@@ -113,7 +113,6 @@ var form = {
         // });
     },
     click_listener: function(){
-        alert('2');
         $('form').submit(function(event){
             alert();
             event.preventDefault();
