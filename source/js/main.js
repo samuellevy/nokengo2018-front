@@ -104,7 +104,7 @@ var basics = {
 }
 
 var form = {
-    webservice: 'http://web.nokengo.com/messages/',
+    webservice: 'http://web.nokengo.com/message/',
     init: function(){
         form.click_listener();
         // $('form.contact').submit(function(event){
