@@ -92,12 +92,12 @@ var basics = {
                 $('.tag[data-screen='+screen+']').removeClass('absolute');
                 $('.tag[data-screen='+screen+']').addClass('fixed');
                 old_screen = screen;
-                console.log('nao igual');
+                //console.log('nao igual');
             }else{
-                console.log('igual');
+                //console.log('igual');
             }
             
-            console.log(scroll + ' - ' + screen + ' - ' + old_screen);
+            //console.log(scroll + ' - ' + screen + ' - ' + old_screen);
             lastScrollTop = st;
         });
     }
@@ -114,7 +114,6 @@ var form = {
     },
     click_listener: function(){
         $('form').submit(function(event){
-            alert();
             event.preventDefault();
             body = JSON.stringify({
                 "from" : $('.contact_name').val(),
