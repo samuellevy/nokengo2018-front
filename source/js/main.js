@@ -104,7 +104,7 @@ var basics = {
 }
 
 var form = {
-    webservice: 'http://localhost/nokengo-back/api/public/contact',
+    webservice: 'http://web.nokengo.com/messages/',
     init: function(){
         this.click_listener();
     },
@@ -112,9 +112,9 @@ var form = {
         $('form.contact').submit(function(){
             event.preventDefault();
             body = JSON.stringify({
-                "name" : $('.contact_name').val(),
+                "from" : $('.contact_name').val(),
                 "email" : $('.contact_email').val(),
-                "message" : $('.contact_message').val()
+                "content" : $('.contact_message').val()
             });
             $('.modal-message').html('Enviando mensagem...');
             
