@@ -10,7 +10,7 @@ var basics = {
         });
     },
     clickNavigation: function() {
-        $(".nav-item").click(function(){
+        $(".nav-item").click(function(event){
             event.preventDefault();
             section = $(this).attr('data-href');
             position = $(section).offset().top;
