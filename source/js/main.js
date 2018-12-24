@@ -18,7 +18,7 @@ var basics = {
             $("#nav").toggleClass('active');
         });
         
-        $(".to-screen").click(function(){
+        $(".to-screen").click(function(event){
             event.preventDefault();
             section = $(this).attr('data-href');
             position = $(section).offset().top;
@@ -106,10 +106,16 @@ var basics = {
 var form = {
     webservice: 'http://web.nokengo.com/messages/',
     init: function(){
-        this.click_listener();
+        form.click_listener();
+        // $('form.contact').submit(function(event){
+        //     event.preventDefault();
+        //     alert('submited');
+        // });
     },
     click_listener: function(){
-        $('form.contact').submit(function(){
+        alert('2');
+        $('form').submit(function(event){
+            alert();
             event.preventDefault();
             body = JSON.stringify({
                 "from" : $('.contact_name').val(),
