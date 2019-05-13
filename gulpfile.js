@@ -45,10 +45,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('pages', function() {
-  gulp.src(source + '/*.html')
-  gulp.src(source + '/*.php')
-	.pipe(gulp.dest(target))
-	.pipe(browserSync.stream());
+  return gulp.src(source + '/*.html')
+	  .pipe(gulp.dest(target))
+	  .pipe(browserSync.stream());
 });
 
 gulp.task('images', function() {
